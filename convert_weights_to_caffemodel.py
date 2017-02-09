@@ -17,10 +17,11 @@ for layer_name, blob in net.blobs.iteritems():
     print layer_name + '\t' + str(blob.data.shape)
 count = 0
 for layer_name, param in net.params.iteritems():
-    sum = param[0].data.size + param[1].data.size
-    count += sum
-    print layer_name + '\t' + str(param[0].data.shape) + \
-          '\t' + str(param[1].data.shape) + '\t' + str(sum)
+    print layer_name + '\t',
+    for i in range(len(param)):
+        count += np.prod(param[i].data.shape)
+        print str(param[i].data.shape) + '\t',
+    print
 print 'count=', str(count)
 params = net.params.keys()
 # read weights from file and assign to the network
@@ -36,6 +37,7 @@ count = 0
 for pr in params:
     lidx = list(net._layer_names).index(pr)
     layer = net.layers[lidx]
+    # conv_bias = None
     if count == netWeights.shape[0]:
         print "WARNING: no weights left for %s" % pr
         break
