@@ -1,10 +1,9 @@
 name: "YOLONET"
-input: "data"
-input_shape {
-  dim: 1
-  dim: 3
-  dim: 416
-  dim: 416
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param { shape: { dim: 1 dim: 3 dim: 416 dim: 416 } }
 }
 layer {
   name: "conv1"
@@ -16,12 +15,7 @@ layer {
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -29,15 +23,6 @@ layer {
   type: "BatchNorm"
   bottom: "conv1"
   top: "bn1"
-  param {
-    lr_mult: 0
-  }
-  param {
-    lr_mult: 0
-  }
-  param {
-    lr_mult: 0
-  }
 }
 layer {
   name: "scale1"
@@ -78,12 +63,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -141,12 +121,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -194,12 +169,7 @@ layer{
     kernel_size: 1
     pad: 0 #??
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -246,12 +216,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -309,12 +274,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -361,12 +321,7 @@ layer{
     kernel_size: 1
     pad: 0
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -413,12 +368,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -476,12 +426,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -528,12 +473,7 @@ layer{
     kernel_size: 1
     pad: 0
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -580,12 +520,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -632,12 +567,7 @@ layer{
     kernel_size: 1
     pad: 0
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -684,12 +614,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -747,12 +672,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -799,12 +719,7 @@ layer{
     kernel_size: 1
     pad: 0
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -852,12 +767,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -904,12 +814,7 @@ layer{
     kernel_size: 1
     pad: 0
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -957,12 +862,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -1011,12 +911,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+    bias_term: false
   }
 }
 layer {
@@ -1065,7 +960,9 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
+    bias_term: false
   }
+
 }
 layer {
   name: "bn20"
@@ -1136,6 +1033,7 @@ layer{
     kernel_size: 3
     pad: 1
     stride: 1
+    bias_term: false
   }
 }
 layer {
@@ -1183,10 +1081,4 @@ layer{
     pad: 0
     stride: 1
   }
-}
-layer {
-  name: "relu22"
-  type: "ReLU"
-  bottom: "conv22"
-  top: "conv22"
 }
