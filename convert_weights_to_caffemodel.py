@@ -63,4 +63,4 @@ for pr in params:
         print "WARNING: unsupported layer, "+pr
 if np.prod(netWeights.shape) != count:
     print "ERROR: size mismatch: %d" % count
-# net.save(caffemodel_filename)
+net.save(caffemodel_filename)

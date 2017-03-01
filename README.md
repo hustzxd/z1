@@ -5,7 +5,7 @@
 yolo2的网络配置文件，对应着darknet中的[yolo.cfg](https://github.com/pjreddie/darknet/blob/master/cfg/yolo.cfg)编写
  2. [conver_weights_to_caffemodel.py](https://github.com/hustzxd/yolo2_to_caffe_tool/blob/master/convert_weights_to_caffemodel.py)  
 将yolo2的weights文件转化为caffemodel文件  
-`python conver_weights_to_caffemodel.py yolo.prototxt yolo.weight yolo.caffemodel`
+可能需要更改prototxt和weights的路径
  3. [compare_output.py](https://github.com/hustzxd/yolo2_to_caffe_tool/blob/master/compare_output.py)  
 比较darknet和caffe各层输出的脚本文件，使用这个脚本比较是一种可靠的方式，但是也可以把数据图形化显示，这样更容易比较，而且不用在意数值上的严格相等</br>
 `python compare_output.py layer_output_in_caffe layer_output_in_darknet`
